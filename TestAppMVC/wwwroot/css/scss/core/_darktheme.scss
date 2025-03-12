@@ -1,0 +1,65 @@
+
+[data-theme="dark"] {
+
+  background-color: $background-dark;
+  color: $text-color-dark;
+
+
+
+
+// CreateAccount
+  .text-input{
+  background-color: $white-100;
+  color: $grey-600;
+  &:focus {
+    outline: none;
+    }
+}
+.surfice {
+background-color: $dark-100;
+}
+.create-account {
+  border: none;
+}
+
+.text-input{
+  background-color: $dark-300;
+  background-color: $dark-300;
+  border: none;
+}
+// CreateAccount
+
+// login-card
+
+.login-card{
+  background-color: $dark-200;
+  .btn-blue{
+    border: none;
+  }
+}
+
+// login-card
+
+
+
+// sidebar
+.logotype span {
+  color: $white-100;
+}
+
+.nav-links .nav-link {
+  
+  color: $white-100; 
+}
+
+  $navlink-text-color: $white-100;
+  $navlink-text-hover-color: $blue-accent;
+  $navlink-text-active-color: $blue-accent;
+
+  $navlink-background-color: transparent;
+  $navlink-background-hover-color: $blue-accent-10;
+  $navlink-background-active-color: $blue-accent-10;
+}
+// sidebar
+
+

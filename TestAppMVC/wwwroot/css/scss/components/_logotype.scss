@@ -1,0 +1,20 @@
+.alpha-logotype {
+  font-size: 26px;
+  font-weight: $font-bold;
+  font-family: $font-logo;
+  text-decoration: none;
+  color: $text-color;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem
+}
+  .alpha-logotype span {
+    color: $text-color;
+  }
+  @media (max-width: 768px) {
+    .alpha-logotype {
+        display: flex;
+        flex-direction: column;
+    }
+}

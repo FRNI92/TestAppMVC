@@ -1,0 +1,54 @@
+
+
+$font-standard: "Nunito", sans-serif;
+$font-logo: "Comfortaa", sans-serif;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extrabold: 800;
+$font-black: 900;
+
+$size-tablet: 768px;
+$size-desktop: 1400px;
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $font-standard;
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-size:36px;
+  font-weight: $font-bold;
+}
+
+h2 {
+  font-size:32px;
+  font-weight: $font-bold;
+}
+
+h3{
+  font-size:28px;
+  font-weight: $font-bold;
+}
+
+h4{
+  font-size:24px;
+  font-weight: $font-semibold;
+}
+
+h5{
+  font-size:20px;
+  font-weight: $font-semibold;
+}
+
+h6{
+  font-size:18px;
+  font-weight: $font-semibold;
+}
+
+label {
+  font-family: $font-regular;
+  font-style: $font-standard;
+}

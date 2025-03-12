@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "_CleanLayout";
+    ViewData["Title"] = "CreateAccount";
+}
+
+<div class="center-screen">
+    <form>
+
+        <div class="surfice">
+            <h2>Create Account</h2>
+            <button id="dark-mode-toggle">Dark Mode</button>
+            <!-- Google sign-up button -->
+            <button type="button" class="google-signup btn">
+                <i class="fa-brands fa-google"></i> Sign Up with Google
+            </button>
+
+            <div class="divider">
+                OR
+            </div>
+
+            <!-- Full Name -->
+            <label for="fullname">Full Name</label>
+            <input type="text" class="text-input" id="fullname" name="fullname" placeholder="Your full name">
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input type="email" class="text-input" id="email" name="email" placeholder="Your email address">
+
+            <!-- Password -->
+            <label for="password">Password</label>
+            <input type="password" class="text-input" id="password" name="password" placeholder="Enter your password">
+
+            <!-- Confirm Password -->
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" class="text-input" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+
+
+            <!-- Terms and Conditions -->
+            <div class="terms">
+                <label class="check">
+                    <input type="checkbox" id="terms" name="terms" class="custom-checkbox">
+                    <span>I accept</span>
+                </label>
+                <a href="#">Terms and Conditions</a>
+            </div>
+
+            <!-- Create Account Button -->
+            <button type="submit" class="create-account btn-blue">Create Account</button>
+
+            <!-- Login Link -->
+            <p class="already-account">Already have an account?<a href="#">Login</a></p>
+        </div>
+    </form>
+</div>

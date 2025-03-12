@@ -1,0 +1,50 @@
+
+
+$btn-blue-text-color: $white-100;
+$btn-blue-border-color: $white-100;
+$btn-blue-text-hover-color: $white-100;
+$btn-blue-border-hover-color: $white-100;
+$btn-blue-background-color: $blue-accent;
+$btn-blue-background-hover-color: $accent-dark;
+
+
+$btn-grey-text-color: $dark-100;
+$btn-grey-border-color: $white-100;
+$btn-grey-background-color: $white-100;
+$btn-grey-text-hover-color: $dark-100;
+$btn-grey-border-hover-color: $grey-300;
+$btn-grey-background-hover-color: $grey-300;
+
+.btn {
+  border-radius: 14px;
+  font-size: 1em;
+  font-weight: $font-semibold;
+  font-family: $font-standard;
+  padding: 0.7rem 1.5rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap:0.5em;
+}
+
+.btn-blue {
+  color: $btn-blue-text-color;
+  border-color:$btn-blue-border-color;
+  background-color: $btn-blue-background-color;
+  &:hover{
+    color: $btn-blue-text-hover-color;
+    border-color:$btn-blue-border-hover-color;
+    background-color: $btn-blue-background-hover-color;
+  }
+}
+.btn-grey {
+  color: $btn-grey-text-color;
+  border-color: $btn-grey-border-color;
+  background-color: $btn-grey-background-color;
+  &:hover{
+    color: $btn-grey-text-hover-color;
+    border-color:$btn-grey-border-hover-color;
+    background-color: $btn-grey-background-hover-color;
+  }
+  
+}

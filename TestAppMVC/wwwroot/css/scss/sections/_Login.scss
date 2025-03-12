@@ -1,0 +1,81 @@
+.login-card {
+  display: flex;
+  width: 60dvw; // Dynamisk bredd baserad på viewport width
+  max-width: 500px;
+  padding: 5rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 16px;
+  background-color: $white-100;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+
+  h1 {
+    align-self: center;
+  }
+
+  span {
+    font-weight: $font-semibold;
+  }
+
+  a {
+    text-decoration: none;
+    color: $blue-accent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 768px) { 
+    padding: 2rem; 
+    width: 95dvw; 
+    height: 95dvh;
+  }
+}
+
+.google-login{
+  display: grid;
+  grid-template-columns: auto 1fr; 
+  padding: 0.8em 1.5em;
+  gap: 1em; 
+  border: none;
+  cursor: pointer;
+  background-color: $border-100;
+}
+
+.text-input{
+  padding: 1em .7em;
+  border: 1px solid $border-100;
+  border-radius: 14px;
+  @media (max-width:768px){margin-bottom: 0em;}
+}
+.text-input::placeholder {
+
+  font-weight: $font-regular;
+  font-family: $font-standard;
+}
+
+.remember-forgot {
+  display: inline-flex;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: $blue-accent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.btn-blue{
+  margin-top: 1em;
+}
+
+.dont-sign{
+  margin-top: 2.5rem;
+  display:flex;
+  justify-content: center;
+  gap: .3em;
+}

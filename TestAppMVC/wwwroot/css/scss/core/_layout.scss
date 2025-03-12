@@ -1,0 +1,33 @@
+
+
+.portal {
+  display:grid;
+  grid-template-columns: minmax(50px, 270px) 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "logo top" "side main";
+  height: 100dvh;
+
+  .logotype {
+    grid-area: logo;
+    border-right: 1px solid $border-color;
+    padding: 1rem 2rem;
+  }
+  .side {
+    grid-area: side;
+    border-right: 1px solid $border-color;
+    padding: 1rem;
+  }
+  .top {
+    grid-area: top;
+    border-bottom: 1px solid $border-color;
+    padding: 1rem 2rem;
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap: 5rem;
+    align-items: center;    
+  }
+  .main {
+    grid-area: main;
+    padding: 2rem
+  }
+}

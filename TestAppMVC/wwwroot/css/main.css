@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+label {
+  font-family: 400;
+  font-style: "Nunito", sans-serif;
+}
+
+/*base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+}
+
+[data-theme=dark] {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+}
+[data-theme=dark] .text-input {
+  background-color: #FFFFFF;
+  color: #9E9E9E;
+}
+[data-theme=dark] .text-input:focus {
+  outline: none;
+}
+[data-theme=dark] .surfice {
+  background-color: #1A1926;
+}
+[data-theme=dark] .create-account {
+  border: none;
+}
+[data-theme=dark] .text-input {
+  background-color: #28263B;
+  background-color: #28263B;
+  border: none;
+}
+[data-theme=dark] .login-card {
+  background-color: #202123;
+}
+[data-theme=dark] .login-card .btn-blue {
+  border: none;
+}
+[data-theme=dark] .logotype span {
+  color: #FFFFFF;
+}
+[data-theme=dark] .nav-links .nav-link {
+  color: #FFFFFF;
+}
+
+[data-theme=light] {
+  color: #1A1926;
+  background-color: #F1F3F7;
+}
+[data-theme=light] .surfice {
+  background-color: #FFFFFF;
+}
+
+.portal {
+  display: grid;
+  grid-template-columns: minmax(50px, 270px) 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "logo top" "side main";
+  height: 100dvh;
+}
+.portal .logotype {
+  grid-area: logo;
+  border-right: 1px solid #E3E5E8;
+  padding: 1rem 2rem;
+}
+.portal .side {
+  grid-area: side;
+  border-right: 1px solid #E3E5E8;
+  padding: 1rem;
+}
+.portal .top {
+  grid-area: top;
+  border-bottom: 1px solid #E3E5E8;
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5rem;
+  align-items: center;
+}
+.portal .main {
+  grid-area: main;
+  padding: 2rem;
+}
+
+.alpha-logotype {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Comfortaa", sans-serif;
+  text-decoration: none;
+  color: #1A1926;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.alpha-logotype span {
+  color: #1A1926;
+}
+
+@media (max-width: 768px) {
+  .alpha-logotype {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.border {
+  border: 1px solid #E3E5E8;
+}
+
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.surfice {
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  box-shadow: 0 5px 8px 2px rgba(151, 151, 151, 0.1);
+}
+
+.btn {
+  border-radius: 14px;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  padding: 0.7rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.btn-blue {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  background-color: #2D99FF;
+}
+.btn-blue:hover {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  background-color: #2682D9;
+}
+
+.btn-grey {
+  color: #1A1926;
+  border-color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+.btn-grey:hover {
+  color: #1A1926;
+  border-color: #E8EAED;
+  background-color: #E8EAED;
+}
+
+.nav-links {
+  margin: 2rem 0;
+}
+.nav-links .nav-link {
+  font-size: 1em;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1A1926;
+  background-color: transparent;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  margin-bottom: 10px;
+}
+.nav-links .nav-link:hover {
+  color: #2D99FF;
+  background-color: rgba(45, 153, 255, 0.1019607843);
+}
+.nav-links .nav-link.active {
+  color: #2D99FF;
+  background-color: rgba(45, 153, 255, 0.1019607843);
+}
+
+@media (max-width: 768px) {
+  .nav-links .nav-link {
+    padding: 1rem 0.6rem;
+    gap: 0.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+.surfice {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 8px 2px rgba(151, 151, 151, 0.1);
+  width: clamp(300px, 50vw, 500px);
+  flex: 1;
+  padding: clamp(1rem, 4vw, 4rem);
+}
+
+.google-signup {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 0.8em 1.5em;
+  gap: 1em;
+  border: none;
+  cursor: pointer;
+  background-color: #EBEEF2;
+}
+
+.surfice h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  color: #637085;
+  display: flex;
+  font-size: 0.75rem;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+.divider::before, .divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #EBEEF2;
+  margin: 0 10px;
+}
+
+.surfice label {
+  font-weight: 600;
+}
+
+.text-input {
+  margin-bottom: 1em;
+  padding: 1em 0.7em;
+  border: 1px solid #EBEEF2;
+  border-radius: 14px;
+}
+@media (max-width: 768px) {
+  .text-input {
+    margin-bottom: 0em;
+  }
+}
+
+.text-input::-moz-placeholder {
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+}
+
+.text-input::placeholder {
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+}
+
+.terms a {
+  text-decoration: none;
+  color: #2D99FF;
+}
+
+.create-account {
+  margin-top: 2em;
+  padding: 0.8rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid #FFFFFF;
+}
+
+.already-account {
+  margin-top: 4em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+}
+.already-account a {
+  color: #2D99FF;
+  text-decoration: none;
+}
+
+.login-card {
+  display: flex;
+  width: 60dvw;
+  max-width: 500px;
+  padding: 5rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.login-card h1 {
+  align-self: center;
+}
+.login-card span {
+  font-weight: 600;
+}
+.login-card a {
+  text-decoration: none;
+  color: #2D99FF;
+}
+.login-card a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .login-card {
+    padding: 2rem;
+    width: 95dvw;
+    height: 95dvh;
+  }
+}
+
+.google-login {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 0.8em 1.5em;
+  gap: 1em;
+  border: none;
+  cursor: pointer;
+  background-color: #EBEEF2;
+}
+
+.text-input {
+  padding: 1em 0.7em;
+  border: 1px solid #EBEEF2;
+  border-radius: 14px;
+}
+@media (max-width: 768px) {
+  .text-input {
+    margin-bottom: 0em;
+  }
+}
+
+.text-input::-moz-placeholder {
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+}
+
+.text-input::placeholder {
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+}
+
+.remember-forgot {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.remember-forgot a {
+  text-decoration: none;
+  color: #2D99FF;
+}
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn-blue {
+  margin-top: 1em;
+}
+
+.dont-sign {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.3em;
+}/*# sourceMappingURL=main.css.map */
