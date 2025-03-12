@@ -7,6 +7,14 @@
 
 
 
+  // top
+.hamburger-menu{
+  background-color: $background-dark;
+}
+
+  // top
+
+
 // CreateAccount
   .text-input{
   background-color: $white-100;
@@ -36,9 +44,35 @@ background-color: $dark-100;
   .btn-blue{
     border: none;
   }
+
 }
 
+
 // login-card
+
+
+
+// minimenu
+.mini-menu-card{
+  background-color: $dark-300;
+  box-shadow: 0 0 4px $blue-dark;
+
+  h4{
+    color: $grey-500
+  }
+  .avatar-name-card{
+    background-color: $dark-300;
+  }
+  .gear{
+    background-color: $dark-300;
+  }
+  &:hover{
+    box-shadow: 0 0 10px $blue-dark;
+  }
+}
+
+// minimenu
+
 
 
 

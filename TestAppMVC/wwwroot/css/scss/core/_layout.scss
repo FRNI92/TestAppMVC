@@ -22,8 +22,7 @@
     border-bottom: 1px solid $border-color;
     padding: 1rem 2rem;
     display:grid;
-    grid-template-columns: 1fr auto;
-    gap: 5rem;
+    grid-template-columns: 1fr auto auto;
     align-items: center;    
   }
   .main {

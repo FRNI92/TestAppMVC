@@ -15,10 +15,20 @@
         <div class="logotype">
             @await Html.PartialAsync("Partials/Components/_AlphaLogotype")
         </div>
+
         <div class="side">
             @await Html.PartialAsync("Partials/Components/_NavLinks")
         </div>
-        <div class="top"></div>
+
+        <div class="top">
+            <div class="border">Search</div>
+            <button class="hamburger-menu settings-trigger menu-trigger">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+            <div class="menu-trigger avatar">Avatar</div>
+            @await Html.PartialAsync("partials/Components/_MiniMenu")
+        </div>
+
         <main class="main">@RenderBody()</main>
     </div>
 
@@ -26,3 +36,5 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+
