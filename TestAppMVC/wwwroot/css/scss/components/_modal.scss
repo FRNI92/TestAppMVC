@@ -1,0 +1,170 @@
+#addClientModal .modal-content{
+  width:550px;
+}
+
+#edithClientModal .modal-content{
+  width:550px;
+}
+// button
+.btn-add::before {
+  content: '\2b';
+  font-family: $font-fa-free;
+}
+
+.btn-close{
+  cursor: pointer;
+  font-size: 2em;
+  border: none;
+  background-color: transparent;
+  color: $grey-600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .btn-close::after{
+    content: '\f00d';
+    font-weight: 900; //needed to get the symbol to work. also add connection to fontawesome in html document
+    font-family: $font-fa-free;
+  }
+
+
+// image-previewer
+
+.image-previewer{
+  border: 2px dashed $grey-300;
+  height: 150px;
+  width: 150px;
+  margin: 2rem auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow:hidden;
+
+  position: relative;
+}
+  .image-previewer::after{
+    content: '\f030';
+    font-family: $font-fa-free;
+    font-weight: $font-bold;
+    background-color: $dark-t60;
+    color: $white-100;
+    padding: 1rem;
+    border-radius: 50%;
+    position: relative;
+    bottom: 0;
+  }
+
+  .image-previewer.selected::after{
+    content: '\f044';
+    position: absolute;
+    bottom: 5px ;
+
+  }
+
+  .image-previewer.circle {
+    border-radius: 50%;
+  }
+  .image-previewer.square {
+    border-radius: 16px;
+  }
+
+
+// image-previewer
+
+
+// modal
+.modal {
+  display: flex;//had an extra display flex below that made it not be display none
+  justify-content: center;
+  align-items: center;
+  background-color: $grey-400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+
+}
+  .modal .modal-content{
+    background-color: $white-400;
+    border-radius: 16px;
+    box-shadow: 0 4px 4px 3px rgba(196, 196, 196, 0.1);
+    padding: 2rem;
+  }
+
+  .modal .modal-content .modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    // border: 1px solid red; during development. h3 was not working properly
+  }
+
+  .btn-submit {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  form {
+    width:100%;
+  }
+      form .form-group{
+          position:relative;
+          display:grid;
+          gap: 0.2rem;
+          margin-bottom: 1.2rem;
+      }
+  
+      form .field-group{
+          position: relative;
+      }
+  
+      form input, 
+      form select,
+      form textarea{
+          width: 100%;
+          font-size: 1em;
+          padding: 0.5rem 1rem;
+          border-radius: 16px;
+          border: 1px solid $grey-600;
+          outline:none;
+      }
+          form input:focus, 
+          form select:focus,
+          form textarea:focus{
+              border: 1px solid $border-focus-color;
+          }
+  
+          form input::placeholder, 
+          form select::placeholder,
+          form textarea::placeholder{
+              color: $grey-500;
+              font-size: .9em;
+          }
+  
+    form .input-validation-error{
+      border-color: $red-dark;
+    }
+  
+    form .field-validation-error {
+      position: absolute;
+      z-index: 1;
+      right: 0.2rem;
+      top: 3px;
+      font-size: 0.8em;
+      background-color: $red-10;
+      color: $red;
+      padding: 0.4rem 1rem;
+      border-radius: 14px;
+  
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+//modal

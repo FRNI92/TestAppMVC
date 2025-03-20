@@ -15,5 +15,6 @@ html, body {
   font-weight: $font-regular;
   font-family: $font-standard;
   font-style: normal;
+  height: 100%; //added this to make my client take up all avaliable space
 }
 

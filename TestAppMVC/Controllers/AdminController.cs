@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Business.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace TestAppMVC.Controllers;
 
@@ -7,6 +8,12 @@ public class AdminController : Controller
 {
     [Route("members")]
     public IActionResult Members()
+    {
+        return View();
+    }
+
+    [Route("clients")]
+    public IActionResult Clients()
     {
         return View();
     }

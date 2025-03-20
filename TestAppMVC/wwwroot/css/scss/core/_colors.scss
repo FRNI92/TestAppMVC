@@ -1,4 +1,5 @@
 $dark-100: #1A1926;
+$dark-t60: hsla(245, 21%, 12%, 0.4);
 $dark-200: #202123;
 $dark-300: #28263B;
 
@@ -26,6 +27,7 @@ $blue-light: #2CD9D9;
 $orange: #FF9640;
 $orange-dark: #F09330;
 $red: #FF6640;
+$red-10: rgba(255, 102, 64, 0.1);
 $red-dark: #E94D3F;
 $yellow: #FFD422;
 $yellow-dark: #FCBB42;
@@ -52,5 +54,7 @@ $navlink-background-color: transparent;
 $navlink-background-hover-color: $blue-accent-10;
 $navlink-background-active-color: $blue-accent-10;
 
+$border-focus-color: $blue-accent;
 
+$image-background-preview: $dark-t60;
 
