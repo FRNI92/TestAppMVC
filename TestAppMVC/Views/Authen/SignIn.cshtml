@@ -1,0 +1,33 @@
+﻿@* @using Business.Dtos put this in viewimports for easy access *@
+@model SignInFormDto;
+
+@{
+    ViewData["Title"] = "SignIn";// show this name on the browser tab
+}
+
+@* from our AppUserDto. no styling only prepared divs *@
+<div id="signin">
+    <form id="signin-form" asp-action="SignIn" asp-controller="Authen" method="post" novalidate>
+
+        @* hidden input, returnUrl value sets to viewbag.returnurl. sends user to correct page after sign in 
+            so if I go to hidden/secret I will be redirected to sign in. when I sign in I will be redirected to hidden/secret page
+        *@
+        <input type="hidden" name="returnUrl"  value="@ViewBag.ReturnUrl" />
+
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+        </div>
+        <div>
+            @ViewBag.ErrorMessage
+        </div>
+        @* to access the error message *@
+
+        <button type="submit">Sign IN</button>
+
+    </form>
+</div>

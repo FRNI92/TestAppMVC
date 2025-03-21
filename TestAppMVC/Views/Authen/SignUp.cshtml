@@ -1,0 +1,64 @@
+﻿@* @using Business.Dtos put this in viewimports for easy access *@
+@model AppUserDto;
+
+@{
+    ViewData["Title"] = "SignUp";// show this name on the browser tab
+}
+
+@* from our AppUserDto. no styling only prepared divs *@
+<div id="signup">
+    <form id="signup-form" asp-action="SignUp" asp-controller="Authen" method="post" novalidate>
+        <div>
+            <label asp-for="FirstName"></label>
+            <div>
+                <input asp-for="FirstName" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="LastName"></label>
+            <div>
+                <input asp-for="LastName" />
+                <span asp-validation-for="LastName"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="Email"></label>
+            <div>
+                <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <div>
+                <input asp-for="Password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="ConfirmPassword"></label>
+            <div>
+                <input asp-for="ConfirmPassword" />
+                <span asp-validation-for="ConfirmPassword"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="Phone"></label>
+            <div>
+                <input asp-for="Phone" />
+                <span asp-validation-for="Phone"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="TermsAndConditions"></label>
+            <div>
+                <input asp-for="TermsAndConditions" />
+                <span asp-validation-for="TermsAndConditions"></span>
+            </div>
+        </div>
+
+        <button type="submit">Sign UP</button>
+
+    </form>
+</div>

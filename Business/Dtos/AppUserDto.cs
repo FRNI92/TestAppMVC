@@ -43,6 +43,6 @@ public class AppUserDto : IdentityUser // Inherits from IdentityUser
 
     [Required(ErrorMessage = "Required")]
     [Display(Name = "Terms & Conditions", Prompt = "I accept")]
-    [DataType(DataType.Custom)]
-    public bool TremsAndConditions { get; set; } 
+
+    public bool TermsAndConditions { get; set; } 
 }

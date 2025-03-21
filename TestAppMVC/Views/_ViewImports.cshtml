@@ -1,5 +1,12 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using MVCDatabse.Entities
 @using TestAppMVC.Models
 
 @using Business.Models
 
+@using Business.Dtos
+
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<AppUserEntity> signInManager
+@* needs the entityt so see all values *@

@@ -1,4 +1,5 @@
-﻿
+﻿@* @using Microsoft.AspNetCore.Identity *@
+@*  @inject SignInManager<SignInFormDto> signInManager move both to view imports  *@
 <div class="mini-menu-card">
 
     <div class="avatar-name-card">
@@ -16,11 +17,30 @@
                 <input id="mini-menu-dark-mode-toggle" type="checkbox">
                 <span class="slider"></span>
             </label>
+
+            @* signInManager has data abuout the user.user is a claims part that has cookieinfo about the user where email and id exists. if true loggedin *@
+            @if (signInManager.IsSignedIn(User))
+            {
+                <!-- shows this if signed in -->
+                <a asp-controller="Authen" asp-action="SignOut" class="logout-button-text">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sign Out</span>
+                </a>
+            }
+            else
+            {
+                <!-- shows this if not signed in-->
+                <a asp-controller="Authen" asp-action="SignUp" class="logout-button-text">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>Sign Up</span>
+                </a>
+
+                <a asp-controller="Authen" asp-action="SignIn" class="logout-button-text">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <span>Sign In</span>
+                </a>
+            }
         </div>
     </div>
-    <div class="logout-button-text">
-        <i class="fa-solid fa-right-from-bracket"></i>
-        <span>Logout</span>
 
-    </div>
 </div>
